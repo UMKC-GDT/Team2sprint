@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do42a4svq8xc0"
-path="res://.godot/imported/isometric-sandbox-sheet.png-1824b81abb7c6748dcb9d3be99f8e706.ctex"
+uid="uid://c7jp2v315rvdy"
+path="res://.godot/imported/tile5.jpg-e3402fd550b0c86bdd74268f5304f590.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://isometric-sandbox-sheet.png"
-dest_files=["res://.godot/imported/isometric-sandbox-sheet.png-1824b81abb7c6748dcb9d3be99f8e706.ctex"]
+source_file="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile5.jpg"
+dest_files=["res://.godot/imported/tile5.jpg-e3402fd550b0c86bdd74268f5304f590.ctex"]
 
 [params]
 

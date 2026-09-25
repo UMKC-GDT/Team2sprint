@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvr0cnq3kig4b"
-path="res://.godot/imported/tile3.jpg-432d006896cce7fa271cb8902f098ef3.ctex"
+uid="uid://crs8hkmn078c"
+path="res://.godot/imported/tile4.jpg-c9730051520d1e8442de0939293afe2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/tile3.jpg"
-dest_files=["res://.godot/imported/tile3.jpg-432d006896cce7fa271cb8902f098ef3.ctex"]
+source_file="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile4.jpg"
+dest_files=["res://.godot/imported/tile4.jpg-c9730051520d1e8442de0939293afe2e.ctex"]
 
 [params]
 

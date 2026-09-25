@@ -1,9 +1,9 @@
 [gd_resource type="TileSet" format=3 uid="uid://bxr7fpbr1hmrk"]
 
-[ext_resource type="Texture2D" uid="uid://do42a4svq8xc0" path="res://isometric-sandbox-sheet.png" id="1_veomx"]
+[ext_resource type="Texture2D" uid="uid://do42a4svq8xc0" path="res://Assets/isometric-sandbox-sheet.png" id="1_cyjxd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mlgln"]
-texture = ExtResource("1_veomx")
+texture = ExtResource("1_cyjxd")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -8)
