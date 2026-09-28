@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjrohpooys7ow"]
 
-[ext_resource type="Script" uid="uid://dlkoth00dau4x" path="res://Minigame_scenes/Puzzle_Slider_Minigame/main.gd" id="1_fshg2"]
+[ext_resource type="Script" uid="uid://dlkoth00dau4x" path="res://Minigame_scenes/Puzzle_Slider_Minigame/puzzle_slider.gd" id="1_fshg2"]
 [ext_resource type="Texture2D" uid="uid://c7pg6arbpuqov" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile1.jpg" id="2_yaehf"]
 [ext_resource type="Texture2D" uid="uid://cflisyfwwxs7d" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile2.jpg" id="3_074og"]
 [ext_resource type="Texture2D" uid="uid://cvr0cnq3kig4b" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile3.jpg" id="4_cegan"]
