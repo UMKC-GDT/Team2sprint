@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://btcn84po7urp3"]
+
+[ext_resource type="Script" uid="uid://cy13eav5wmt0t" path="res://Scenes/ProgressManager/progress_manager.gd" id="1_ejuen"]
+
+[node name="ProgressManager" type="Node2D" unique_id=1512258127]
+script = ExtResource("1_ejuen")

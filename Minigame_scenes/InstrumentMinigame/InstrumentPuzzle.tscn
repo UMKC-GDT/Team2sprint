@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://m7ljlhmjc2xj"]
+
+[ext_resource type="Script" uid="uid://uh06rtn55ir3" path="res://Minigame_scenes/InstrumentMinigame/instrument_puzzle.gd" id="1_jlyym"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+
+[node name="InstrumentPuzzle" type="Node2D" unique_id=878424620]
+script = ExtResource("1_jlyym")
+correct_key = Array[int]([2, 2, 3])
+
+[node name="Button1" type="Area2D" parent="." unique_id=1294256987]
+position = Vector2(0, -48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button1" unique_id=1016736553]
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Button2" type="Area2D" parent="." unique_id=1142313463]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button2" unique_id=789889397]
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Button3" type="Area2D" parent="." unique_id=886231675]
+position = Vector2(0, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Button3" unique_id=835865658]
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[connection signal="input_event" from="Button1" to="." method="_on_button_1_input_event"]
+[connection signal="input_event" from="Button2" to="." method="_on_button_2_input_event"]
+[connection signal="input_event" from="Button3" to="." method="_on_button_3_input_event"]
