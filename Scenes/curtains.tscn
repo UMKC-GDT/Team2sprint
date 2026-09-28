@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://c0yh2j1q1ttop"]
 
 [ext_resource type="Texture2D" uid="uid://dncnvuh8an5ly" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/curtains_v1.png" id="1_mvm28"]
+[ext_resource type="Script" uid="uid://d3d4w7dhusjkk" path="res://Scenes/curtains.gd" id="2_3iljt"]
 
 [node name="Curtains" type="Sprite2D" unique_id=1852586239]
 scale = Vector2(3.1684213, 3.1428578)
 texture = ExtResource("1_mvm28")
+script = ExtResource("2_3iljt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1515875252]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=668937020]
+polygon = PackedVector2Array(-25.564783, -22.909086, 7.890365, -39.136356, 7.259136, 23.54545, 1.8936877, 25.136358, 2.2093022, -34.36363, -11.677741, -27.999994, -10.099668, 31.499994, -22.408638, 38.18181, -22.408638, -20.363632)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

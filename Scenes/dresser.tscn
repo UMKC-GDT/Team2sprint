@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://coxoi58qf3bcn"]
 
 [ext_resource type="Texture2D" uid="uid://cupwcfdwwyuv7" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/bigger_placeholder_block_v1.png" id="1_t1abr"]
+[ext_resource type="Script" uid="uid://cg347x33vxwpf" path="res://Scenes/dresser.gd" id="2_0j27c"]
 
 [node name="Dresser" type="Sprite2D" unique_id=382749505]
 scale = Vector2(3.2151163, 3.296052)
 texture = ExtResource("1_t1abr")
+script = ExtResource("2_0j27c")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=292230670]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1548077091]
+polygon = PackedVector2Array(-21.150091, -16.079844, -30.792044, -10.618765, -30.481012, 3.9441125, -0.31103075, 17.900204, 12.44123, 13.652698, 11.819168, -1.8203597)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

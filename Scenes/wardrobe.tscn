@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://7sn7hra0hy3g"]
 
 [ext_resource type="Texture2D" uid="uid://cyaybipdoc5af" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/closet_v1.png" id="1_6b8cd"]
+[ext_resource type="Script" uid="uid://cip4k7sm4g48x" path="res://Scenes/wardrobe.gd" id="2_flhbc"]
 
 [node name="Wardrobe" type="Sprite2D" unique_id=1144019204]
 scale = Vector2(3.015464, 3.0080643)
 texture = ExtResource("1_6b8cd")
+script = ExtResource("2_flhbc")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1996922878]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=543231952]
+polygon = PackedVector2Array(-26.19829, -18.616623, 11.275213, -39.227882, 26.861536, -32.24665, 25.866665, 33.57641, -10.280341, 52.19303, -26.529913, 46.541557)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

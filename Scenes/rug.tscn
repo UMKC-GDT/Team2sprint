@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://vg4gb32xhwrw"]
 
 [ext_resource type="Texture2D" uid="uid://cdov5ew6lb11h" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/carpet_v1.png" id="1_72525"]
+[ext_resource type="Script" uid="uid://b6os80stvyupo" path="res://Scenes/rug.gd" id="2_a24m1"]
 
 [node name="Rug" type="Sprite2D" unique_id=1689549767]
 scale = Vector2(3.0372343, 3.1111104)
 texture = ExtResource("1_72525")
+script = ExtResource("2_a24m1")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1667142682]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1654639984]
 polygon = PackedVector2Array(5.9264445, -28.607151, 52.679504, -5.1428585, -27.65674, 34.071438, -74.08055, 11.89286)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

@@ -1,7 +1,17 @@
 [gd_scene format=3 uid="uid://di46rsmtr4wyk"]
 
 [ext_resource type="Texture2D" uid="uid://bkkd3y2y3cqyo" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/weird_cabinent_v1.png" id="1_7bua8"]
+[ext_resource type="Script" uid="uid://gte5y15am0ga" path="res://Scenes/shoebox.gd" id="2_lbbba"]
 
-[node name="Shoebox?" type="Sprite2D" unique_id=1713826047]
+[node name="Shelf" type="Sprite2D" unique_id=1713826047]
 scale = Vector2(3.1925282, 3.0595245)
 texture = ExtResource("1_7bua8")
+script = ExtResource("2_lbbba")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1772580338]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1527864512]
+polygon = PackedVector2Array(-23.179123, 0, 1.5661569, -12.747079, 10.336636, -9.478598, 9.710173, 9.805446, -17.854189, 25.494158, -23.492353, 23.53307)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
