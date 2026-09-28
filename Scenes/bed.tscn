@@ -1,7 +1,18 @@
 [gd_scene format=3 uid="uid://8yswdmachr33"]
 
 [ext_resource type="Texture2D" uid="uid://d2fdcjq1dgjmo" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/bed_v1.png" id="1_yfxyx"]
+[ext_resource type="Script" uid="uid://b47hfv4ncjc2m" path="res://Scenes/bed.gd" id="2_8uqln"]
 
 [node name="Bed" type="Sprite2D" unique_id=1699425684]
 scale = Vector2(2.989584, 3.0222225)
 texture = ExtResource("1_yfxyx")
+script = ExtResource("2_8uqln")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=708808011]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2055874555]
+position = Vector2(25.087103, 15.882353)
+polygon = PackedVector2Array(-0.6689892, -5.625001, -30.773514, 10.257352, -31.108007, 14.227939, -36.125427, 14.558822, -36.125427, 8.602939, -58.20208, 0.33088017, -58.20208, 2.9779406, -61.212532, 2.9779406, -60.54354, -10.588236, -57.53309, -7.9411774, -27.428566, -23.492647, -26.425081, -29.117647, -24.752607, -41.691177, 2.0069695, -27.794117, 2.341463, -9.264708, 2.341463, -0.66176605)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

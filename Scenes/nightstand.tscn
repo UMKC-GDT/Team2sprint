@@ -1,7 +1,18 @@
 [gd_scene format=3 uid="uid://8k1a80squec0"]
 
 [ext_resource type="Texture2D" uid="uid://ba1kmkapbtwxt" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/placeholder_block_v1.png" id="1_qh6by"]
+[ext_resource type="Script" uid="uid://c0anv0f85gwo2" path="res://Scenes/nightstand.gd" id="2_pislf"]
 
 [node name="Nightstand" type="Sprite2D" unique_id=1508232984]
 scale = Vector2(2.9209175, 3.1737807)
 texture = ExtResource("1_qh6by")
+script = ExtResource("2_pislf")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1918289695]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2041822462]
+position = Vector2(-6.162447, -5.3563876)
+polygon = PackedVector2Array(0, 0, 16.77555, 5.671469, 16.77555, 13.233429, 6.162447, 19.53506, -9.24367, 13.233429, -9.24367, 4.411143)
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
