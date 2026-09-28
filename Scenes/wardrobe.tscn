@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://7sn7hra0hy3g"]
+
+[ext_resource type="Texture2D" uid="uid://cyaybipdoc5af" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/closet_v1.png" id="1_6b8cd"]
+
+[node name="Wardrobe" type="Sprite2D" unique_id=1144019204]
+scale = Vector2(3.015464, 3.0080643)
+texture = ExtResource("1_6b8cd")
