@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://coxoi58qf3bcn"]
 
 [ext_resource type="Texture2D" uid="uid://cupwcfdwwyuv7" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/bigger_placeholder_block_v1.png" id="1_t1abr"]
-[ext_resource type="Script" uid="uid://cg347x33vxwpf" path="res://Scenes/dresser.gd" id="2_0j27c"]
+[ext_resource type="Script" uid="uid://cg347x33vxwpf" path="res://Scripts/bedroom_objects/dresser.gd" id="2_0j27c"]
 
 [node name="Dresser" type="Sprite2D" unique_id=382749505]
 scale = Vector2(3.2151163, 3.296052)

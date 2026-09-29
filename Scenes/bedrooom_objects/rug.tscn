@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://vg4gb32xhwrw"]
 
 [ext_resource type="Texture2D" uid="uid://cdov5ew6lb11h" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/carpet_v1.png" id="1_72525"]
-[ext_resource type="Script" uid="uid://b6os80stvyupo" path="res://Scenes/rug.gd" id="2_a24m1"]
+[ext_resource type="Script" uid="uid://b6os80stvyupo" path="res://Scripts/bedroom_objects/rug.gd" id="2_a24m1"]
 
 [node name="Rug" type="Sprite2D" unique_id=1689549767]
 scale = Vector2(3.0372343, 3.1111104)

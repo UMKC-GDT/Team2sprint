@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8k1a80squec0"]
 
 [ext_resource type="Texture2D" uid="uid://ba1kmkapbtwxt" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/placeholder_block_v1.png" id="1_qh6by"]
-[ext_resource type="Script" uid="uid://c0anv0f85gwo2" path="res://Scenes/nightstand.gd" id="2_pislf"]
+[ext_resource type="Script" uid="uid://c0anv0f85gwo2" path="res://Scripts/bedroom_objects/nightstand.gd" id="2_pislf"]
 
 [node name="Nightstand" type="Sprite2D" unique_id=1508232984]
 scale = Vector2(2.9209175, 3.1737807)

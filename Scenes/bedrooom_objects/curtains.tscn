@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c0yh2j1q1ttop"]
 
 [ext_resource type="Texture2D" uid="uid://dncnvuh8an5ly" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/curtains_v1.png" id="1_mvm28"]
-[ext_resource type="Script" uid="uid://d3d4w7dhusjkk" path="res://Scenes/curtains.gd" id="2_3iljt"]
+[ext_resource type="Script" uid="uid://d3d4w7dhusjkk" path="res://Scripts/bedroom_objects/curtains.gd" id="2_3iljt"]
 
 [node name="Curtains" type="Sprite2D" unique_id=1852586239]
 scale = Vector2(3.1684213, 3.1428578)

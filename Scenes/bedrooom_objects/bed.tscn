@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://8yswdmachr33"]
 
 [ext_resource type="Texture2D" uid="uid://d2fdcjq1dgjmo" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/bed_v1.png" id="1_yfxyx"]
-[ext_resource type="Script" uid="uid://b47hfv4ncjc2m" path="res://Scenes/bed.gd" id="2_8uqln"]
+[ext_resource type="Script" uid="uid://b47hfv4ncjc2m" path="res://Scripts/bedroom_objects/bed.gd" id="2_8uqln"]
+[ext_resource type="Texture2D" uid="uid://cyaybipdoc5af" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/closet_v1.png" id="3_dgk5o"]
 
 [node name="Bed" type="Sprite2D" unique_id=1699425684]
 scale = Vector2(2.989584, 3.0222225)
 texture = ExtResource("1_yfxyx")
 script = ExtResource("2_8uqln")
+highlight_texture = ExtResource("3_dgk5o")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=708808011]
 

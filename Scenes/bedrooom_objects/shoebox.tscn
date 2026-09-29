@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://di46rsmtr4wyk"]
 
 [ext_resource type="Texture2D" uid="uid://bkkd3y2y3cqyo" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/weird_cabinent_v1.png" id="1_7bua8"]
-[ext_resource type="Script" uid="uid://gte5y15am0ga" path="res://Scenes/shoebox.gd" id="2_lbbba"]
+[ext_resource type="Script" uid="uid://gte5y15am0ga" path="res://Scripts/bedroom_objects/shoebox.gd" id="2_lbbba"]
 
 [node name="Shelf" type="Sprite2D" unique_id=1713826047]
 scale = Vector2(3.1925282, 3.0595245)
