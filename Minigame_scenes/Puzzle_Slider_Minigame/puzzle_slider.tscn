@@ -56,3 +56,8 @@ texture = ExtResource("9_1u8w0")
 [node name="Tile9" type="Sprite2D" parent="." unique_id=564192695]
 position = Vector2(832.5, 832.5)
 texture = ExtResource("10_0odxb")
+
+[node name="Winning_Screen" type="Sprite2D" parent="." unique_id=1277814662]
+position = Vector2(501, 503)
+scale = Vector2(2.988, 3)
+texture = ExtResource("9_1u8w0")

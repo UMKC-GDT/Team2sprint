@@ -7,10 +7,17 @@ var mouse = false
 const GRID_SIZE = 3
 const TILE_SIZE = 333.333333
 
+
+@onready var winning_screen: Sprite2D = $Winning_Screen
+
+
 func _ready():
 	start_game()
 
 func start_game():
+	
+	winning_screen.visible = false
+	
 	tiles = [
 		$Tile1,
 		$Tile2,
@@ -25,23 +32,58 @@ func start_game():
 
 	solved = tiles.duplicate()
 	shuffle_tiles()
-
+	
+	
 
 func shuffle_tiles():
-	var previous = 99
-	var previous_1 = 98
+	var board_1 = [
+		1, 2, 6,
+		4, 3, 9,
+		7, 5, 8
+	]
 
-	for t in range(0, 1000):
-		var tile = randi() % 9
+	var board_2 = [
+		1, 2, 3,
+		7, 4, 6,
+		5, 9, 8
+	]
 
-		if tiles[tile] != $Tile9 and tile != previous and tile != previous_1:
-			var rows = int(tiles[tile].position.y / TILE_SIZE)
-			var cols = int(tiles[tile].position.x / TILE_SIZE)
+	var board_3 = [
+		1, 2, 9,
+		4, 6, 3,
+		7, 5, 8
+	]
 
-			check_neighbours(rows, cols)
+	var board_4 = [
+		1, 2, 3,
+		9, 4, 6,
+		7, 5, 8
+	]
 
-			previous_1 = previous
-			previous = tile
+	var boards = [
+		board_1,
+		board_2,
+		board_3,
+		board_4
+	]
+
+	var selected_board = boards[randi() % 4]
+
+	var original_positions = []
+
+	for tile in tiles:
+		original_positions.append(tile.position)
+
+	for i in range(9):
+		var tile_number = selected_board[i]
+		tiles[i] = get_node("Tile" + str(tile_number))
+
+		var rows = i / GRID_SIZE
+		var cols = i % GRID_SIZE
+
+		var original_index = rows * GRID_SIZE + cols
+
+		tiles[i].position = original_positions[original_index]
 
 
 func _process(delta):
@@ -55,6 +97,7 @@ func _process(delta):
 		check_neighbours(rows, cols)
 
 		if tiles == solved:
+			winning_screen.visible = true
 			print("You win!")
 
 
