@@ -12,7 +12,7 @@ script = ExtResource("2_pislf")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=2041822462]
 position = Vector2(-6.162447, -5.3563876)
-polygon = PackedVector2Array(0, 0, 16.77555, 5.671469, 16.77555, 13.233429, 6.162447, 19.53506, -9.24367, 13.233429, -9.24367, 4.411143)
+polygon = PackedVector2Array(0, 0, 16.77555, 5.671469, 11.297819, 7.877041, 6.162447, 19.53506, -9.24367, 13.233429, -9.24367, 4.411143)
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

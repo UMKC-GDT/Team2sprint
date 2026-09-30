@@ -11,7 +11,7 @@ script = ExtResource("2_a24m1")
 [node name="Area2D" type="Area2D" parent="." unique_id=1667142682]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1654639984]
-polygon = PackedVector2Array(5.9264445, -28.607151, 52.679504, -5.1428585, -27.65674, 34.071438, -74.08055, 11.89286)
+polygon = PackedVector2Array(8.231173, 2.2500005, 35.558666, -14.14286, 53.00875, -5.785716, -27.65674, 34.071438, -74.08055, 11.89286, -23.047283, -14.14286)
 
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
