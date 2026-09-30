@@ -13,5 +13,6 @@ script = ExtResource("2_0j27c")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1548077091]
 polygon = PackedVector2Array(-20.528028, -16.079844, -21.772152, -6.674652, -24.571428, 6.9780455, -0.31103075, 17.900204, 12.44123, 13.652698, 11.819168, -1.8203597)
 
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

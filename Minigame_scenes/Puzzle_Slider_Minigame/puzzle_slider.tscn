@@ -9,55 +9,75 @@
 [ext_resource type="Texture2D" uid="uid://djo7gi7s3qfyd" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile6.jpg" id="7_ryguw"]
 [ext_resource type="Texture2D" uid="uid://cvasf7sgr83el" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile7.jpg" id="8_d13ii"]
 [ext_resource type="Texture2D" uid="uid://dealaoqd0inss" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile8.jpg" id="9_1u8w0"]
-[ext_resource type="Texture2D" uid="uid://dmrfcqn32n11x" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/empty.jpg" id="10_0odxb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bac8"]
-size = Vector2(1000, 1000)
+size = Vector2(499, 499)
+
+[sub_resource type="Gradient" id="Gradient_2m1pc"]
+colors = PackedColorArray(0.70980394, 0.70980394, 0.70980394, 0.16862746, 0.70796657, 0.7079665, 0.7079665, 0.16862746)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0k32s"]
+gradient = SubResource("Gradient_2m1pc")
 
 [node name="Main" type="Area2D" unique_id=1865724166]
 script = ExtResource("1_fshg2")
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1431589444]
+offset_right = 996.0
+offset_bottom = 1001.0
+color = Color(0.3272991, 0.32729903, 0.32729918, 0.3882353)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1140077835]
-position = Vector2(500, 500)
+position = Vector2(499.5, 499.5)
 shape = SubResource("RectangleShape2D_3bac8")
 
 [node name="Tile1" type="Sprite2D" parent="." unique_id=1906621408]
-position = Vector2(166.5, 166.5)
+position = Vector2(333.25, 333.25)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_yaehf")
 
 [node name="Tile2" type="Sprite2D" parent="." unique_id=1378259595]
-position = Vector2(499.5, 167)
+position = Vector2(499.75, 333.25)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_074og")
 
 [node name="Tile3" type="Sprite2D" parent="." unique_id=1977338555]
-position = Vector2(832.5, 166)
+position = Vector2(666.25, 333.25)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_cegan")
 
 [node name="Tile4" type="Sprite2D" parent="." unique_id=426543069]
-position = Vector2(166.5, 499.5)
+position = Vector2(333.25, 499.75)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_82xsv")
 
 [node name="Tile5" type="Sprite2D" parent="." unique_id=1665836000]
-position = Vector2(499.5, 499.5)
+position = Vector2(499.75, 499.75)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_getpj")
 
 [node name="Tile6" type="Sprite2D" parent="." unique_id=1778779753]
-position = Vector2(832.5, 499.5)
+position = Vector2(666.25, 499.75)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_ryguw")
 
 [node name="Tile7" type="Sprite2D" parent="." unique_id=1433976145]
-position = Vector2(166.5, 832.5)
+position = Vector2(333.25, 666.25)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_d13ii")
 
 [node name="Tile8" type="Sprite2D" parent="." unique_id=1479523960]
-position = Vector2(499.5, 832.5)
+position = Vector2(499.75, 666.25)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_1u8w0")
 
 [node name="Tile9" type="Sprite2D" parent="." unique_id=564192695]
-position = Vector2(832.5, 832.5)
-texture = ExtResource("10_0odxb")
+position = Vector2(666, 666)
+scale = Vector2(0.64843744, 165.99997)
+texture = SubResource("GradientTexture1D_0k32s")
 
 [node name="Winning_Screen" type="Sprite2D" parent="." unique_id=1277814662]
-position = Vector2(501, 503)
-scale = Vector2(2.988, 3)
+visible = false
+position = Vector2(500, 499.50006)
+scale = Vector2(1.4954954, 1.4984986)
 texture = ExtResource("9_1u8w0")
