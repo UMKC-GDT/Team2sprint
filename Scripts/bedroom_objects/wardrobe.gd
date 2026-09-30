@@ -16,7 +16,7 @@ func _on_area_2d_mouse_exited() -> void:
 
 
 #i added this for dialogue  -Cameron
-var text = ["im testing if this will fuck up dialogue", "i bet that id does"]
+var text = ["im a closet", "definitely dont have any skeletons in here", "no sir"]
 
 #this signal is triggered when anything interacts with the area2D
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:

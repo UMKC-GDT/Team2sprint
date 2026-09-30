@@ -34,6 +34,12 @@ size = Vector2(271.97803, 28.246582)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c87yd"]
 size = Vector2(471.52655, 24.952576)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r48xv"]
+size = Vector2(85.101944, 121.01507)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c8h7i"]
+size = Vector2(83.765335, 39.181755)
+
 [node name="Bedroom" type="Node2D" unique_id=1067365110]
 
 [node name="Room_Base" type="Sprite2D" parent="." unique_id=1464485197]
@@ -87,6 +93,36 @@ position = Vector2(254.99997, 805)
 rotation = 0.44099855
 shape = SubResource("RectangleShape2D_c87yd")
 
+[node name="StaticBody2D7" type="StaticBody2D" parent="Collision_Shapes" unique_id=286916109]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision_Shapes/StaticBody2D7" unique_id=681394255]
+position = Vector2(224.49998, 652.99994)
+rotation = 1.1060724
+shape = SubResource("RectangleShape2D_r48xv")
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Collision_Shapes" unique_id=751379476]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision_Shapes/StaticBody2D8" unique_id=1126974035]
+position = Vector2(168.49997, 675.00006)
+rotation = 0.4608283
+shape = SubResource("RectangleShape2D_c8h7i")
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Collision_Shapes" unique_id=1499969871]
+position = Vector2(465.5, -75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision_Shapes/StaticBody2D9" unique_id=672660017]
+position = Vector2(243.14038, 653.9816)
+rotation = 1.1060724
+shape = SubResource("RectangleShape2D_r48xv")
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Collision_Shapes" unique_id=88175578]
+position = Vector2(465.5, -75)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision_Shapes/StaticBody2D10" unique_id=877348371]
+position = Vector2(183.48297, 682.43884)
+rotation = 0.4608283
+shape = SubResource("RectangleShape2D_c8h7i")
+
 [node name="Bedroom_Items" type="Node2D" parent="." unique_id=1958569601]
 position = Vector2(0.5, -91)
 
@@ -103,7 +139,7 @@ position = Vector2(856, 578)
 highlight_texture = ExtResource("7_c8h7i")
 
 [node name="Bed" parent="Bedroom_Items" unique_id=1699425684 instance=ExtResource("6_rsf82")]
-position = Vector2(714, 546.99994)
+position = Vector2(700, 557.99994)
 highlight_texture = ExtResource("9_jjrne")
 
 [node name="Wardrobe" parent="Bedroom_Items" unique_id=1144019204 instance=ExtResource("7_qt6gd")]
@@ -119,7 +155,7 @@ position = Vector2(545, 504)
 highlight_texture = ExtResource("15_ad3fp")
 
 [node name="Character" parent="." unique_id=1049770983 instance=ExtResource("2_0y5hw")]
-position = Vector2(360, 637)
+position = Vector2(425, 628)
 scale = Vector2(3, 3)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1009191293]
