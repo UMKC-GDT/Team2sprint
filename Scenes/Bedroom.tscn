@@ -3,12 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://cclvn8yks1m0c" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/bg_plain_v1.png" id="1_iwh4a"]
 [ext_resource type="PackedScene" uid="uid://bm6diafjv2hj6" path="res://Scenes/Character.tscn" id="2_0y5hw"]
 [ext_resource type="PackedScene" uid="uid://vg4gb32xhwrw" path="res://Scenes/bedrooom_objects/rug.tscn" id="3_iwh4a"]
+[ext_resource type="Texture2D" uid="uid://dmwe8qxtcytd1" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/carpet-hover.png" id="3_rsf82"]
 [ext_resource type="PackedScene" uid="uid://8k1a80squec0" path="res://Scenes/bedrooom_objects/nightstand.tscn" id="4_o0d8c"]
 [ext_resource type="PackedScene" uid="uid://coxoi58qf3bcn" path="res://Scenes/bedrooom_objects/dresser.tscn" id="5_o633n"]
 [ext_resource type="PackedScene" uid="uid://8yswdmachr33" path="res://Scenes/bedrooom_objects/bed.tscn" id="6_rsf82"]
 [ext_resource type="PackedScene" uid="uid://7sn7hra0hy3g" path="res://Scenes/bedrooom_objects/wardrobe.tscn" id="7_qt6gd"]
 [ext_resource type="PackedScene" uid="uid://di46rsmtr4wyk" path="res://Scenes/bedrooom_objects/shoebox.tscn" id="8_t6n27"]
 [ext_resource type="PackedScene" uid="uid://c0yh2j1q1ttop" path="res://Scenes/bedrooom_objects/curtains.tscn" id="9_23pcv"]
+[ext_resource type="Script" uid="uid://blolag0nqs876" path="res://Scenes/dialogue_box.gd" id="10_o0d8c"]
+[ext_resource type="Script" uid="uid://diclifvn2d7mu" path="res://Scenes/run_dialogue.gd" id="11_o633n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7e2x"]
 size = Vector2(611.9302, 12.935608)
@@ -28,11 +31,12 @@ size = Vector2(471.52655, 24.952576)
 [node name="Bedroom" type="Node2D" unique_id=1067365110]
 
 [node name="Room_Base" type="Sprite2D" parent="." unique_id=1464485197]
-position = Vector2(497, 540)
+position = Vector2(497.5, 449)
 scale = Vector2(3, 3)
 texture = ExtResource("1_iwh4a")
 
 [node name="Collision_Shapes" type="Node2D" parent="." unique_id=712209660]
+position = Vector2(0.5, -91)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Collision_Shapes" unique_id=428817072]
 
@@ -78,9 +82,11 @@ rotation = 0.44099855
 shape = SubResource("RectangleShape2D_c87yd")
 
 [node name="Bedroom_Items" type="Node2D" parent="." unique_id=1958569601]
+position = Vector2(0.5, -91)
 
 [node name="Rug" parent="Bedroom_Items" unique_id=1689549767 instance=ExtResource("3_iwh4a")]
 position = Vector2(645, 646.00006)
+highlight_texture = ExtResource("3_rsf82")
 
 [node name="Nightstand" parent="Bedroom_Items" unique_id=1508232984 instance=ExtResource("4_o0d8c")]
 position = Vector2(674.4375, 510.9375)
@@ -101,8 +107,27 @@ position = Vector2(441, 594)
 position = Vector2(545, 504)
 
 [node name="Character" parent="." unique_id=1049770983 instance=ExtResource("2_0y5hw")]
-position = Vector2(363, 725)
+position = Vector2(360, 637)
 scale = Vector2(3, 3)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1009191293]
 position = Vector2(494, 500)
+
+[node name="DialogueBox" type="ColorRect" parent="." unique_id=364843787]
+unique_name_in_owner = true
+offset_left = 111.0
+offset_top = 865.0
+offset_right = 877.0
+offset_bottom = 986.0
+script = ExtResource("10_o0d8c")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox" unique_id=1443217607]
+layout_mode = 0
+offset_right = 762.0
+offset_bottom = 117.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 30
+text = "Dialogue box"
+script = ExtResource("11_o633n")
+
+[connection signal="dialogue_done" from="DialogueBox/RichTextLabel" to="DialogueBox" method="_on_dialogue_done"]
