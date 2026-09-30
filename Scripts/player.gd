@@ -65,35 +65,41 @@ func set_direction():
 		
 		
 func move():
+
 	match current_direction:
 		direction.UP: 
 			self.velocity = Vector2(0,-SPEED)
-			$AnimatedSprite2D.play("Walk_Up")
+			#$AnimatedSprite2D.play("Walk_Up")
 		direction.DOWN: 
 			self.velocity = Vector2(0,SPEED)
-			$AnimatedSprite2D.play("Walk_Down")
+			#$AnimatedSprite2D.play("Walk_Down")
 		direction.UP_LEFT: 
 			self.velocity = cartesian_to_isometric(Vector2(-SPEED,0))
-			$AnimatedSprite2D.play("Walk_Up_Left")
+			#$AnimatedSprite2D.play("Walk_Up_Left")
 		direction.UP_RIGHT: 
 			self.velocity = cartesian_to_isometric(Vector2(0,-SPEED))
-			$AnimatedSprite2D.play("Walk_Up_Right")
+			#$AnimatedSprite2D.play("Walk_Up_Right")
 		direction.DOWN_LEFT: 
 			self.velocity = cartesian_to_isometric(Vector2(0, SPEED))
-			$AnimatedSprite2D.play("Walk_Down_Left")
+			#$AnimatedSprite2D.play("Walk_Down_Left")
 		direction.DOWN_RIGHT: 
 			self.velocity = cartesian_to_isometric(Vector2(SPEED, 0))
-			$AnimatedSprite2D.play("Walk_Down_Right")
+			#$AnimatedSprite2D.play("Walk_Down_Right")
 		direction.RIGHT: 
 			self.velocity = Vector2(SPEED,0)
-			$AnimatedSprite2D.play("Walk_Right")
+			#$AnimatedSprite2D.play("Walk_Right")
 		direction.LEFT: 
 			self.velocity = Vector2(-SPEED, 0)
-			$AnimatedSprite2D.play("Walk_Left")
+			#$AnimatedSprite2D.play("Walk_Left")
 		direction.IDLE: 
 			self.velocity = Vector2(0,0)
-			$AnimatedSprite2D.play("Idle_down")
-		
+			#$AnimatedSprite2D.play("Idle_down")
+
+	if current_direction != direction.IDLE:
+		$AnimationPlayer.play("walking")
+	else:
+		$AnimationPlayer.play("idle")
+	
 	move_and_slide()
 		
 		
