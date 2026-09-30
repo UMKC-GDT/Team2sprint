@@ -8,9 +8,10 @@ func _ready() -> void:
 	
 #objects in the room call this function 
 #the dialogue text is stored on the object itself
-func trigger_dialogue(text: Array):
-	textBox.set_lines(text)
-	textBox.set_running(true)
+func trigger_dialogue(text: Array, ran_once: bool = false):
+	if !textBox.running_dialogue and !ran_once:
+		textBox.set_lines(text)
+		textBox.set_running(true)
 	
 #ends the dialogue box
 func _on_dialogue_done() -> void:
