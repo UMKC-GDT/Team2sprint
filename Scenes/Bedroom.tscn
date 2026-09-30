@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://coxoi58qf3bcn" path="res://Scenes/bedrooom_objects/dresser.tscn" id="5_o633n"]
 [ext_resource type="Texture2D" uid="uid://g3rhtbxyfrhh" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/placeholder_block_hover.png" id="5_r48xv"]
 [ext_resource type="PackedScene" uid="uid://8yswdmachr33" path="res://Scenes/bedrooom_objects/bed.tscn" id="6_rsf82"]
-[ext_resource type="Texture2D" uid="uid://cmqxmeu3jtluc" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/bigger+placeholder_block_hover.png" id="7_c8h7i"]
 [ext_resource type="PackedScene" uid="uid://7sn7hra0hy3g" path="res://Scenes/bedrooom_objects/wardrobe.tscn" id="7_qt6gd"]
 [ext_resource type="PackedScene" uid="uid://di46rsmtr4wyk" path="res://Scenes/bedrooom_objects/shoebox.tscn" id="8_t6n27"]
 [ext_resource type="PackedScene" uid="uid://c0yh2j1q1ttop" path="res://Scenes/bedrooom_objects/curtains.tscn" id="9_23pcv"]
@@ -136,7 +135,6 @@ highlight_texture = ExtResource("5_r48xv")
 
 [node name="Dresser" parent="Bedroom_Items" unique_id=382749505 instance=ExtResource("5_o633n")]
 position = Vector2(856, 578)
-highlight_texture = ExtResource("7_c8h7i")
 
 [node name="Bed" parent="Bedroom_Items" unique_id=1699425684 instance=ExtResource("6_rsf82")]
 position = Vector2(700, 557.99994)
@@ -178,4 +176,5 @@ theme_override_font_sizes/normal_font_size = 30
 text = "Dialogue box"
 script = ExtResource("11_o633n")
 
+[connection signal="dialogue_done" from="DialogueBox/RichTextLabel" to="Bedroom_Items/Dresser" method="_on_rich_text_label_dialogue_done"]
 [connection signal="dialogue_done" from="DialogueBox/RichTextLabel" to="DialogueBox" method="_on_dialogue_done"]

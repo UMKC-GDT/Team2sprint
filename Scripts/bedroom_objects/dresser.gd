@@ -31,13 +31,13 @@ func _on_area_2d_mouse_exited() -> void:
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-
 			if dialogue_run_count < text.size():
 				%DialogueBox.trigger_dialogue(text, dialogue_run_count > 0)
 				dialogue_run_count += 1
-				return
 
-			if not minigame_instantiated:
-				var minigame = PUZZLE_SLIDER.instantiate()
-				get_tree().current_scene.add_child(minigame)
-				minigame_instantiated = true
+
+func _on_rich_text_label_dialogue_done() -> void:
+	if not minigame_instantiated:
+		var minigame = PUZZLE_SLIDER.instantiate()
+		get_tree().current_scene.add_child(minigame)
+		minigame_instantiated = true
