@@ -284,6 +284,7 @@ polygon = PackedVector2Array(-117, 43, -117, 53, -23, 101, -14, 100, 49, 65, 67,
 modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 position = Vector2(214, -262)
 texture = ExtResource("8_1pg7v")
+object_dialogue = Array[String](["you found a key!", "testing testing ", "asdfasdfsad"])
 key_item = NodePath("../../Key1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="interactable room objects/RoomObject12/Area2D" parent_id_path=PackedInt32Array(1292781736, 1279646432) index="0" unique_id=1442654628]
