@@ -17,11 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://dogoynnv3aswi" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/BRIEFCASEV2.png" id="13_1pg7v"]
 [ext_resource type="Texture2D" uid="uid://bhhrqvcswklb1" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/BOOKSV2.png" id="15_1pg7v"]
 [ext_resource type="Script" uid="uid://blolag0nqs876" path="res://Scenes/dialogue_box.gd" id="17_ug7gy"]
+[ext_resource type="Texture2D" uid="uid://b34dakc5vj001" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/CLOSETV2.png" id="18_juscx"]
 [ext_resource type="Script" uid="uid://diclifvn2d7mu" path="res://Scenes/run_dialogue.gd" id="18_qjbeq"]
+[ext_resource type="AudioStream" uid="uid://comerq3w2iam0" path="res://Assets/dream ost 1.ogg" id="19_q8tsh"]
 [ext_resource type="PackedScene" uid="uid://btcn84po7urp3" path="res://Scenes/ProgressManager/ProgressManager.tscn" id="19_qjbeq"]
 [ext_resource type="PackedScene" uid="uid://bm6diafjv2hj6" path="res://Scenes/Character.tscn" id="20_fgq5o"]
 
 [node name="BedroomNew" type="Node2D" unique_id=1499491445]
+position = Vector2(1, 4)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1898676998]
 offset_left = -1292.0
@@ -30,114 +33,6 @@ offset_right = 1267.0
 offset_bottom = 1272.0
 mouse_filter = 2
 color = Color(0.015686275, 0.05490196, 0.09803922, 1)
-
-[node name="Fullbgv2" type="Sprite2D" parent="." unique_id=2027358643]
-position = Vector2(0, -249)
-texture = ExtResource("1_ylc2q")
-
-[node name="room objects" type="Node2D" parent="." unique_id=1505447080]
-
-[node name="RoomObject" parent="room objects" unique_id=2043795701 instance=ExtResource("2_qjasy")]
-position = Vector2(-270, -30)
-texture = ExtResource("2_mm7ng")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject/Area2D" parent_id_path=PackedInt32Array(2043795701, 1279646432) index="0" unique_id=271471525]
-polygon = PackedVector2Array(12, -6, 38, -15, 59, -13, 69, -5, 72, 8, 79, 16, 103, 21, 125, 26, 136, 34, 149, 51, 154, 63, 154, 75, 148, 106, 131, 119, 104, 139, 76, 138, 56, 134, 41, 125, 32, 119, 25, 98, 12, 80, -11, 79, -29, 77, -35, 45, -30, 30, -13, 11, -114, -58, -130, -57, -146, -64, -158, -71, -158, -87, -138, -104, -128, -101, -118, -106, -109, -94, -103, -82, -109, -76, 3, -4)
-
-[node name="RoomObject2" parent="room objects" unique_id=46401239 instance=ExtResource("2_qjasy")]
-position = Vector2(314, 363)
-texture = ExtResource("5_sdvs8")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject2/Area2D" parent_id_path=PackedInt32Array(46401239, 1279646432) index="0" unique_id=78410547]
-polygon = PackedVector2Array(64, -63, 93, -46, 101, -33, 102, 6, 99, 79, 8, 146, -17, 148, -41, 131, -60, 128, -95, 138, -122, 138, -150, 123, -158, -49, -150, -69, -21, -138, 16, -142, 59, -121)
-
-[node name="RoomObject3" parent="room objects" unique_id=708086931 instance=ExtResource("2_qjasy")]
-position = Vector2(110, -341)
-texture = ExtResource("4_30l3a")
-mini_game = "slider"
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject3/Area2D" parent_id_path=PackedInt32Array(708086931, 1279646432) index="0" unique_id=232087425]
-polygon = PackedVector2Array(-90, 52, -97, 70, -62, 70, -58, 52, -31, 48, -33, 61, 5, 55, 9, 38, 29, 22, 40, 24, 50, 13, 54, 5, 79, 4, 83, -9, 96, -9, 115, -31, 110, -38, 61, -41, 38, -26, 38, -18, 49, -16, 37, 2, 40, 8, 33, 17, 12, 5, 21, -5, 12, -14, -9, 6, -18, 1, -31, 11, -25, 18, -31, 25, -53, 26, -64, 48, -68, 52, -89, 51)
-
-[node name="RoomObject4" parent="room objects" unique_id=1028415383 instance=ExtResource("2_qjasy")]
-position = Vector2(-292, -261)
-texture = ExtResource("10_ug7gy")
-object_dialogue = Array[String](["you clicked on me", "yaya dialgoue"])
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject4/Area2D" parent_id_path=PackedInt32Array(1028415383, 1279646432) index="0" unique_id=717904288]
-polygon = PackedVector2Array(-11, -178, 66, -141, 22, 190, -52, 150)
-
-[node name="RoomObject5" parent="room objects" unique_id=22304266 instance=ExtResource("2_qjasy")]
-position = Vector2(-843, 66)
-texture = ExtResource("7_4k705")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject5/Area2D" parent_id_path=PackedInt32Array(22304266, 1279646432) index="0" unique_id=1694779924]
-polygon = PackedVector2Array(136, -29, 130, -23, 134, 73, 35, 136, -126, 45, -125, -51, -130, -54, -135, -76, -21, -139, 135, -54)
-
-[node name="RoomObject6" parent="room objects" unique_id=1674239616 instance=ExtResource("2_qjasy")]
-position = Vector2(353, -36)
-texture = ExtResource("8_psw2n")
-object_dialogue = Array[String](["i clicked on rug", "testing testing ", "whoop whoop"])
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject6/Area2D" parent_id_path=PackedInt32Array(1674239616, 1279646432) index="0" unique_id=1730456066]
-polygon = PackedVector2Array(319, -36, 406, 16, 9, 265, -417, 19, -1, -214, 57, -184, -95, -91, -96, -19, -87, -12, -86, 1, -75, 8, -64, 4, 91, 88, 93, 98, 103, 103, 115, 98, 116, 90)
-
-[node name="RoomObject7" parent="room objects" unique_id=1257005458 instance=ExtResource("2_qjasy")]
-position = Vector2(506, -141)
-texture = ExtResource("9_mm7ng")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject7/Area2D" parent_id_path=PackedInt32Array(1257005458, 1279646432) index="0" unique_id=39913873]
-polygon = PackedVector2Array(232, -30, 143, -77, 149, -92, 160, -103, 140, -100, 56, -142, 55, -159, 46, -149, 15, -125, -44, -92, -55, -100, -88, -79, -248, 14, -248, 46, -250, 56, -247, 83, -240, 93, -239, 104, -229, 111, -213, 108, -61, 192, -61, 203, -49, 208, -39, 202, -36, 191, 224, 29, 225, 38, 235, 44, 247, 36, 246, -7, 234, -16)
-
-[node name="RoomObject8" parent="room objects" unique_id=1125063200 instance=ExtResource("2_qjasy")]
-position = Vector2(-418, -609)
-texture = ExtResource("10_sdvs8")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject8/Area2D" parent_id_path=PackedInt32Array(1125063200, 1279646432) index="0" unique_id=1954777685]
-polygon = PackedVector2Array(-3, 45, -14, 48, -20, 43, -26, 0, -35, 5, -41, 4, -43, -2, -39, -11, -34, -16, -40, -22, -43, -32, -41, -38, -36, -36, -34, -39, -38, -40, -39, -44, -35, -48, -26, -53, -18, -60, -11, -62, -6, -57, 1, -57, 5, -51, 5, -47, 12, -47, 14, -39, 18, -38, 19, -33, 19, -27, 17, -21, 18, -17, 12, -15, 17, -11, 17, -4, 19, 0, 21, 8, 14, 11, 9, 7, 9, 1, 7, 2, 0, 43)
-
-[node name="RoomObject9" parent="room objects" unique_id=564779108 instance=ExtResource("2_qjasy")]
-position = Vector2(-63, -296)
-texture = ExtResource("11_bfqmo")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject9/Area2D" parent_id_path=PackedInt32Array(564779108, 1279646432) index="0" unique_id=2119528100]
-polygon = PackedVector2Array(25, 24, 26, 27, 30, 27, 34, 62, 30, 66, 10, 74, -17, 76, -40, 71, -45, 43, -32, 33, -48, 28, -75, 14, -59, -22, -48, -54, -44, -88, -25, -98, -12, -100, 12, -101, 23, -97, 25, -90, 28, -51, 34, -30, 47, -15, 61, -4, 59, 2, 30, 21)
-
-[node name="RoomObject10" parent="room objects" unique_id=125270367 instance=ExtResource("2_qjasy")]
-position = Vector2(556, -547)
-texture = ExtResource("12_4k705")
-object_dialogue = Array[String](["this one has dialogue"])
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject10/Area2D" parent_id_path=PackedInt32Array(125270367, 1279646432) index="0" unique_id=106953522]
-polygon = PackedVector2Array(39, -62, 50, -15, 76, -2, 104, -1, 129, -19, 145, -45, 142, -73, 129, -95, 104, -105, 75, -108, 52, -94, 42, -66, -4, -67, -3, -91, -150, -158, -150, -95, -151, 90, -24, 146, -12, 139, 108, 197, 115, 78, -4, 19, -4, -65)
-
-[node name="RoomObject11" parent="room objects" unique_id=255219782 instance=ExtResource("2_qjasy")]
-position = Vector2(-909, -623)
-texture = ExtResource("13_1pg7v")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject11/Area2D" parent_id_path=PackedInt32Array(255219782, 1279646432) index="0" unique_id=1082675792]
-polygon = PackedVector2Array(-117, 43, -117, 53, -23, 101, -14, 100, 49, 65, 67, 65, 91, 53, 101, 45, 108, 28, 139, 10, 137, -8, 134, -35, 30, -78, -124, 10, -121, 30, -124, 35, -121, 42)
-
-[node name="RoomObject12" parent="room objects" unique_id=1292781736 instance=ExtResource("2_qjasy")]
-position = Vector2(214, -262)
-texture = ExtResource("8_1pg7v")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject12/Area2D" parent_id_path=PackedInt32Array(1292781736, 1279646432) index="0" unique_id=1442654628]
-polygon = PackedVector2Array(-2, -50, -36, -29, -36, -16, -29, -13, -21, 19, -2, 25, 20, 18, 30, -14, 35, -24, 37, -37, 23, -47)
-
-[node name="RoomObject13" parent="room objects" unique_id=1360500746 instance=ExtResource("2_qjasy")]
-position = Vector2(-468, -388)
-texture = ExtResource("15_1pg7v")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject13/Area2D" parent_id_path=PackedInt32Array(1360500746, 1279646432) index="0" unique_id=1999112157]
-polygon = PackedVector2Array(79, 6, 114, 23, 104, 46, 100, 68, 105, 81, 107, 84, 97, 90, 56, 70, 59, 15, 77, 8, 16, -15, 17, -1, 18, 10, 27, 35, 17, 43, 1, 36, -14, 29, -43, 15, -47, 9, -57, 4, -80, -8, -87, -8, -114, -22, -116, -78, -93, -90, -85, -83, -84, -75, -71, -76, -62, -70, -58, -66, -44, -58, -36, -57, -24, -50, -23, -44, 4, -34, 1, -19, 16, -16)
-
-[node name="RoomObject14" parent="room objects" unique_id=570435468 instance=ExtResource("2_qjasy")]
-position = Vector2(-322, 336)
-texture = ExtResource("6_bfqmo")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject14/Area2D" parent_id_path=PackedInt32Array(570435468, 1279646432) index="0" unique_id=1305438774]
-polygon = PackedVector2Array(93, 93, 87, 45, 130, 14, 189, 29, 194, 82, 164, 115, 96, 96, 54, 80, -14, 126, -156, 62, -160, -39, -86, -75, 52, -15, 54, 77)
 
 [node name="DialogueBox" type="ColorRect" parent="." unique_id=766784773]
 offset_left = -1087.0
@@ -168,28 +63,196 @@ theme_override_font_sizes/normal_font_size = 70
 text = "Dialogue "
 script = ExtResource("18_qjbeq")
 
+[node name="Fullbgv2" type="Sprite2D" parent="." unique_id=2027358643]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(0, -249)
+texture = ExtResource("1_ylc2q")
+
+[node name="room objects" type="Node2D" parent="." unique_id=1505447080]
+
+[node name="RoomObject" parent="room objects" unique_id=2043795701 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(-270, -30)
+texture = ExtResource("2_mm7ng")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject/Area2D" parent_id_path=PackedInt32Array(2043795701, 1279646432) index="0" unique_id=271471525]
+polygon = PackedVector2Array(12, -6, 38, -15, 59, -13, 69, -5, 72, 8, 79, 16, 103, 21, 125, 26, 136, 34, 149, 51, 154, 63, 154, 75, 148, 106, 131, 119, 104, 139, 76, 138, 56, 134, 41, 125, 32, 119, 25, 98, 12, 80, -11, 79, -29, 77, -35, 45, -30, 30, -13, 11, -114, -58, -130, -57, -146, -64, -158, -71, -158, -87, -138, -104, -128, -101, -118, -106, -109, -94, -103, -82, -109, -76, 3, -4)
+
+[node name="RoomObject3" parent="room objects" unique_id=708086931 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(110, -341)
+texture = ExtResource("4_30l3a")
+mini_game = "slider"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject3/Area2D" parent_id_path=PackedInt32Array(708086931, 1279646432) index="0" unique_id=232087425]
+polygon = PackedVector2Array(-90, 52, -97, 70, -62, 70, -58, 52, -31, 48, -33, 61, 5, 55, 9, 38, 29, 22, 40, 24, 50, 13, 54, 5, 79, 4, 83, -9, 96, -9, 115, -31, 110, -38, 61, -41, 38, -26, 38, -18, 49, -16, 37, 2, 40, 8, 33, 17, 12, 5, 21, -5, 12, -14, -9, 6, -18, 1, -31, 11, -25, 18, -31, 25, -53, 26, -64, 48, -68, 52, -89, 51)
+
+[node name="RoomObject4" parent="room objects" unique_id=1028415383 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(-292, -261)
+texture = ExtResource("10_ug7gy")
+object_dialogue = Array[String](["you clicked on me", "yaya dialgoue"])
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject4/Area2D" parent_id_path=PackedInt32Array(1028415383, 1279646432) index="0" unique_id=717904288]
+polygon = PackedVector2Array(-11, -178, 66, -141, 22, 190, -52, 150)
+
+[node name="RoomObject6" parent="room objects" unique_id=1674239616 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(353, -36)
+texture = ExtResource("8_psw2n")
+object_dialogue = Array[String](["i clicked on rug", "testing testing ", "whoop whoop"])
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject6/Area2D" parent_id_path=PackedInt32Array(1674239616, 1279646432) index="0" unique_id=1730456066]
+polygon = PackedVector2Array(319, -36, 406, 16, 9, 265, -417, 19, -1, -214, 57, -184, -95, -91, -96, -19, -87, -12, -86, 1, -75, 8, -64, 4, 91, 88, 93, 98, 103, 103, 115, 98, 116, 90)
+
+[node name="RoomObject8" parent="room objects" unique_id=1125063200 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(-418, -609)
+texture = ExtResource("10_sdvs8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject8/Area2D" parent_id_path=PackedInt32Array(1125063200, 1279646432) index="0" unique_id=1954777685]
+polygon = PackedVector2Array(-3, 45, -14, 48, -20, 43, -26, 0, -35, 5, -41, 4, -43, -2, -39, -11, -34, -16, -40, -22, -43, -32, -41, -38, -36, -36, -34, -39, -38, -40, -39, -44, -35, -48, -26, -53, -18, -60, -11, -62, -6, -57, 1, -57, 5, -51, 5, -47, 12, -47, 14, -39, 18, -38, 19, -33, 19, -27, 17, -21, 18, -17, 12, -15, 17, -11, 17, -4, 19, 0, 21, 8, 14, 11, 9, 7, 9, 1, 7, 2, 0, 43)
+
+[node name="RoomObject9" parent="room objects" unique_id=564779108 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(-63, -296)
+texture = ExtResource("11_bfqmo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject9/Area2D" parent_id_path=PackedInt32Array(564779108, 1279646432) index="0" unique_id=2119528100]
+polygon = PackedVector2Array(25, 24, 26, 27, 30, 27, 34, 62, 30, 66, 10, 74, -17, 76, -40, 71, -45, 43, -32, 33, -48, 28, -75, 14, -59, -22, -48, -54, -44, -88, -25, -98, -12, -100, 12, -101, 23, -97, 25, -90, 28, -51, 34, -30, 47, -15, 61, -4, 59, 2, 30, 21)
+
+[node name="RoomObject10" parent="room objects" unique_id=125270367 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(556, -547)
+texture = ExtResource("12_4k705")
+object_dialogue = Array[String](["this one has dialogue"])
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject10/Area2D" parent_id_path=PackedInt32Array(125270367, 1279646432) index="0" unique_id=106953522]
+polygon = PackedVector2Array(39, -62, 50, -15, 76, -2, 104, -1, 129, -19, 145, -45, 142, -73, 129, -95, 104, -105, 75, -108, 52, -94, 42, -66, -4, -67, -3, -91, -150, -158, -150, -95, -151, 90, -24, 146, -12, 139, 108, 197, 115, 78, -4, 19, -4, -65)
+
+[node name="RoomObject11" parent="room objects" unique_id=255219782 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+z_index = 1
+position = Vector2(-909, -623)
+texture = ExtResource("13_1pg7v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject11/Area2D" parent_id_path=PackedInt32Array(255219782, 1279646432) index="0" unique_id=1082675792]
+polygon = PackedVector2Array(-117, 43, -117, 53, -23, 101, -14, 100, 49, 65, 67, 65, 91, 53, 101, 45, 108, 28, 139, 10, 137, -8, 134, -35, 30, -78, -124, 10, -121, 30, -124, 35, -121, 42)
+
+[node name="RoomObject12" parent="room objects" unique_id=1292781736 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(214, -262)
+texture = ExtResource("8_1pg7v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject12/Area2D" parent_id_path=PackedInt32Array(1292781736, 1279646432) index="0" unique_id=1442654628]
+polygon = PackedVector2Array(-2, -50, -36, -29, -36, -16, -29, -13, -21, 19, -2, 25, 20, 18, 30, -14, 35, -24, 37, -37, 23, -47)
+
+[node name="RoomObject13" parent="room objects" unique_id=1360500746 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+position = Vector2(-468, -388)
+texture = ExtResource("15_1pg7v")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject13/Area2D" parent_id_path=PackedInt32Array(1360500746, 1279646432) index="0" unique_id=1999112157]
+polygon = PackedVector2Array(79, 6, 114, 23, 104, 46, 100, 68, 105, 81, 107, 84, 97, 90, 56, 70, 59, 15, 77, 8, 16, -15, 17, -1, 18, 10, 27, 35, 17, 43, 1, 36, -14, 29, -43, 15, -47, 9, -57, 4, -80, -8, -87, -8, -114, -22, -116, -78, -93, -90, -85, -83, -84, -75, -71, -76, -62, -70, -58, -66, -44, -58, -36, -57, -24, -50, -23, -44, 4, -34, 1, -19, 16, -16)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=186293226]
 zoom = Vector2(0.4, 0.4)
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Camera2D" unique_id=1182947481]
+stream = ExtResource("19_q8tsh")
+autoplay = true
+
 [node name="ProgressManager" parent="." unique_id=1512258127 instance=ExtResource("19_qjbeq")]
 
-[node name="Character" parent="." unique_id=1049770983 instance=ExtResource("20_fgq5o")]
-position = Vector2(-133, 128)
+[node name="Y-sortObjects" type="Node2D" parent="." unique_id=1258323094]
+y_sort_enabled = true
+
+[node name="RoomObject14" parent="Y-sortObjects" unique_id=570435468 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+y_sort_enabled = true
+position = Vector2(-323, 454)
+texture = ExtResource("6_bfqmo")
+offset = Vector2(0, -120)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Y-sortObjects/RoomObject14/Area2D" parent_id_path=PackedInt32Array(570435468, 1279646432) index="0" unique_id=1305438774]
+position = Vector2(1, -119)
+polygon = PackedVector2Array(93, 93, 87, 45, 130, 14, 189, 29, 194, 82, 164, 115, 96, 96, 54, 80, -14, 126, -156, 62, -160, -39, -86, -75, 52, -15, 54, 77)
+
+[node name="Closetv2" type="Sprite2D" parent="Y-sortObjects" unique_id=1896665393]
+y_sort_enabled = true
+position = Vector2(-829, -149)
+texture = ExtResource("18_juscx")
+offset = Vector2(0, -220)
+
+[node name="RoomObject7" parent="Y-sortObjects" unique_id=1257005458 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+y_sort_enabled = true
+position = Vector2(506, -40)
+texture = ExtResource("9_mm7ng")
+offset = Vector2(0, -100)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Y-sortObjects/RoomObject7/Area2D" parent_id_path=PackedInt32Array(1257005458, 1279646432) index="0" unique_id=39913873]
+position = Vector2(1, -99)
+polygon = PackedVector2Array(232, -30, 143, -77, 149, -92, 160, -103, 140, -100, 56, -142, 55, -159, 46, -149, 15, -125, -44, -92, -55, -100, -88, -79, -248, 14, -248, 46, -250, 56, -247, 83, -240, 93, -239, 104, -229, 111, -213, 108, -61, 192, -61, 203, -49, 208, -39, 202, -36, 191, 224, 29, 225, 38, 235, 44, 247, 36, 246, -7, 234, -16)
+
+[node name="RoomObject5" parent="Y-sortObjects" unique_id=22304266 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+y_sort_enabled = true
+position = Vector2(-841, 146)
+texture = ExtResource("7_4k705")
+offset = Vector2(0, -80)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Y-sortObjects/RoomObject5/Area2D" parent_id_path=PackedInt32Array(22304266, 1279646432) index="0" unique_id=1694779924]
+position = Vector2(0, -80)
+polygon = PackedVector2Array(136, -29, 130, -23, 134, 73, 35, 136, -126, 45, -125, -51, -130, -54, -135, -76, -21, -139, 135, -54)
+
+[node name="RoomObject2" parent="Y-sortObjects" unique_id=46401239 instance=ExtResource("2_qjasy")]
+modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
+y_sort_enabled = true
+position = Vector2(316, 516)
+texture = ExtResource("5_sdvs8")
+offset = Vector2(0, -150)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Y-sortObjects/RoomObject2/Area2D" parent_id_path=PackedInt32Array(46401239, 1279646432) index="0" unique_id=78410547]
+position = Vector2(-3, -152)
+polygon = PackedVector2Array(64, -63, 93, -46, 101, -33, 102, 6, 99, 79, 8, 146, -17, 148, -41, 131, -60, 128, -95, 138, -122, 138, -150, 123, -158, -49, -150, -69, -21, -138, 16, -142, 59, -121)
+
+[node name="Character" parent="Y-sortObjects" unique_id=1049770983 instance=ExtResource("20_fgq5o")]
+modulate = Color(0.8014852, 0.69607455, 0.6142551, 1)
+y_sort_enabled = true
+position = Vector2(-19.000002, 227)
 scale = Vector2(0.9, 0.9)
+
+[node name="collission" type="Node2D" parent="." unique_id=1952288143]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="collission" unique_id=683347987]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collission/StaticBody2D" unique_id=634796507]
+polygon = PackedVector2Array(30, 682, 326, 522, 320, 509, 303, 511, 271, 498, 254, 494, 229, 501, 195, 503, 161, 485, 324, 399, 414, 438, 324, 509, 328, 519, 1097, 92, 756, -105, 742, -94, 729, -101, 472, 55, 469, 65, 459, 69, 445, 63, 263, -35, 540, -217, 319, -356, 236, -310, 294, -258, -68, -38, -152, -81, -206, -56, -215, -52, -266, -81, -273, -73, -347, -113, -344, -126, -644, -305, -717, -268, -611, -181, -901, -7, -1065, -77, -1161, -13, -972, 105, -891, 60, -713, 135, -807, 200, -478, 391, -410, 355, -271, 413, -337, 464, 14, 674, 2, 716, -1241, -8, -629, -403, -211, -142, 340, -456, 1179, 75, 9, 720, 19, 673)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="collission" unique_id=1279822943]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collission/StaticBody2D2" unique_id=865916289]
+polygon = PackedVector2Array(-280, -20, -300, 2, -304, 17, -300, 39, -299, 45, -258, 52, -239, 83, -197, 109, -158, 106, -124, 83, -116, 43, -127, 8, -163, -11, -187, -14, -200, -35, -211, -46, -259, -34, -379, -103, -375, -115, -388, -140, -398, -131, -409, -135, -429, -117, -430, -108, -421, -96, -396, -87, -386, -88)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="collission" unique_id=532587284]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collission/StaticBody2D3" unique_id=850439191]
+polygon = PackedVector2Array(-232, 429, -165, 451, -133, 418, -198, 405)
 
 [connection signal="dialogue_done" from="DialogueBox/RichTextLabel" to="DialogueBox" method="_on_dialogue_done"]
 
 [editable path="room objects/RoomObject"]
-[editable path="room objects/RoomObject2"]
 [editable path="room objects/RoomObject3"]
 [editable path="room objects/RoomObject4"]
-[editable path="room objects/RoomObject5"]
 [editable path="room objects/RoomObject6"]
-[editable path="room objects/RoomObject7"]
 [editable path="room objects/RoomObject8"]
 [editable path="room objects/RoomObject9"]
 [editable path="room objects/RoomObject10"]
 [editable path="room objects/RoomObject11"]
 [editable path="room objects/RoomObject12"]
 [editable path="room objects/RoomObject13"]
-[editable path="room objects/RoomObject14"]
+[editable path="Y-sortObjects/RoomObject14"]
+[editable path="Y-sortObjects/RoomObject7"]
+[editable path="Y-sortObjects/RoomObject5"]
+[editable path="Y-sortObjects/RoomObject2"]

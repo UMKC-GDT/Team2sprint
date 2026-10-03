@@ -823,8 +823,9 @@ _data = {
 &"walking": SubResource("Animation_xloa1")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jjrne"]
-radius = 8.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q8tsh"]
+radius = 17.0
+height = 122.0
 
 [node name="Character" type="CharacterBody2D" unique_id=1049770983]
 motion_mode = 1
@@ -840,10 +841,12 @@ frame_progress = 0.104677424
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1553513238]
 texture = ExtResource("3_677pu")
+offset = Vector2(5, -105)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=687614436]
 libraries/ = SubResource("AnimationLibrary_4b18b")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1591805647]
-position = Vector2(1, 21)
-shape = SubResource("CircleShape2D_jjrne")
+position = Vector2(0, -5)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_q8tsh")

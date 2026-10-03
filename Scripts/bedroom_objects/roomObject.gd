@@ -16,10 +16,12 @@ var mouse_on = false
 func on_mouse_entered() -> void:
 	mouse_on = true
 	self.scale = Vector2(1.05,1.05)
+	self.modulate = Color(1,1,1)
 
 func on_mouse_exited() -> void:
 	mouse_on = false
 	self.scale = Vector2(1,1)
+	self.modulate = Color("8ec7dd")
 	
 
 func on_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:

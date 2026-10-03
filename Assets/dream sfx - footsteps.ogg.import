@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c6114h7edoqw1"
+path="res://.godot/imported/dream sfx - footsteps.ogg-8842822c7f22bc7685b232650b05321f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/dream sfx - footsteps.ogg"
+dest_files=["res://.godot/imported/dream sfx - footsteps.ogg-8842822c7f22bc7685b232650b05321f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
