@@ -14,6 +14,10 @@ config/name="Puzzle Minigame"
 run/main_scene="uid://dhuojvth6uege"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+SignalBus="*uid://c762e3wtibd0p"
+
 [display]
 
 window/size/viewport_width=1000

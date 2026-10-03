@@ -16,14 +16,16 @@ signal dialogue_done
 func _process(_delta):
 	#if there's no dialogue, show nothing
 	if dialogue_lines == null or running_dialogue == false:
-		textbox.visible = false
+		var tween = create_tween()
+		tween.tween_property(textbox, "scale", Vector2(1,0), .15)
+
 		self.text = ""
-		
-	
 	
 	#if dialogue line is still running, add another letter each frame
 	elif line < dialogue_lines.size() and letter < dialogue_lines[line].length():
-		textbox.visible = true
+		var tween = create_tween()
+		tween.tween_property(textbox, "scale", Vector2(1,1), .15)
+		
 		self.text += dialogue_lines[line][letter]
 		letter += 1	
 		

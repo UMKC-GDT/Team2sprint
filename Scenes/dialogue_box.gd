@@ -1,10 +1,10 @@
 extends ColorRect
 
-@onready var textBox: RichTextLabel = get_child(0)
+@onready var textBox: RichTextLabel = get_child(1)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.visible = false 
+	self.scale = Vector2(1,0)
 	
 #objects in the room call this function 
 #the dialogue text is stored on the object itself
