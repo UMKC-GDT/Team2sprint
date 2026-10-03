@@ -153,6 +153,7 @@ position = Vector2(545, 504)
 highlight_texture = ExtResource("15_ad3fp")
 
 [node name="Character" parent="." unique_id=1049770983 instance=ExtResource("2_0y5hw")]
+visible = false
 position = Vector2(425, 628)
 scale = Vector2(3, 3)
 
