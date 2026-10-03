@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://k06ogx1heba1"]
+
+[ext_resource type="Texture2D" uid="uid://ob0jelac5dce" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/FULLBGV2.png" id="1_ylc2q"]
+[ext_resource type="Texture2D" uid="uid://cxtegjeuhvxl7" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/GUITARV2.png" id="2_mm7ng"]
+[ext_resource type="PackedScene" uid="uid://dtly4k4ua3yyn" path="res://Scenes/room_object.tscn" id="2_qjasy"]
+[ext_resource type="Texture2D" uid="uid://b2vlpyf2jslfi" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/DESKPAPERSV2.png" id="4_30l3a"]
+[ext_resource type="Texture2D" uid="uid://deu33bofwamjd" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/TVV2.png" id="5_sdvs8"]
+[ext_resource type="Texture2D" uid="uid://xfyutkwcu5kc" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/RECORDBOXV2.png" id="7_4k705"]
+[ext_resource type="Texture2D" uid="uid://bvl6bcdvb6eov" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/RUG1V2.png" id="8_psw2n"]
+[ext_resource type="Texture2D" uid="uid://c88cwdahtefdk" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/BEDV2.png" id="9_mm7ng"]
+[ext_resource type="Texture2D" uid="uid://84tmj4eerff6" path="res://Assets/V2_BGandAssets_(handdrawn)-20261003T022027Z-1-001/V2_BGandAssets_(handdrawn)/MIRRORV2.png" id="10_ug7gy"]
+
+[node name="BedroomNew" type="Node2D" unique_id=1499491445]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1898676998]
+offset_left = -1292.0
+offset_top = -1232.0
+offset_right = 1267.0
+offset_bottom = 1272.0
+mouse_filter = 2
+color = Color(0.015686275, 0.05490196, 0.09803922, 1)
+
+[node name="Fullbgv2" type="Sprite2D" parent="." unique_id=2027358643]
+position = Vector2(0, -249)
+texture = ExtResource("1_ylc2q")
+
+[node name="RoomObject" parent="." unique_id=2043795701 instance=ExtResource("2_qjasy")]
+position = Vector2(-270, -30)
+texture = ExtResource("2_mm7ng")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoomObject/Area2D" parent_id_path=PackedInt32Array(2043795701, 1279646432) index="0" unique_id=271471525]
+polygon = PackedVector2Array(12, -6, 38, -15, 59, -13, 69, -5, 72, 8, 79, 16, 103, 21, 125, 26, 136, 34, 149, 51, 154, 63, 154, 75, 148, 106, 131, 119, 104, 139, 76, 138, 56, 134, 41, 125, 32, 119, 25, 98, 12, 80, -11, 79, -29, 77, -35, 45, -30, 30, -13, 11, -114, -58, -130, -57, -146, -64, -158, -71, -158, -87, -138, -104, -128, -101, -118, -106, -109, -94, -103, -82, -109, -76, 3, -4)
+
+[node name="RoomObject2" parent="." unique_id=46401239 instance=ExtResource("2_qjasy")]
+position = Vector2(314, 363)
+texture = ExtResource("5_sdvs8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoomObject2/Area2D" parent_id_path=PackedInt32Array(46401239, 1279646432) index="0" unique_id=78410547]
+polygon = PackedVector2Array(64, -63, 93, -46, 101, -33, 102, 6, 99, 79, 8, 146, -17, 148, -41, 131, -60, 128, -95, 138, -122, 138, -150, 123, -158, -49, -150, -69, -21, -138, 16, -142, 59, -121)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=186293226]
+zoom = Vector2(0.395, 0.395)
+
+[node name="RoomObject3" parent="." unique_id=708086931 instance=ExtResource("2_qjasy")]
+position = Vector2(110, -341)
+texture = ExtResource("4_30l3a")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoomObject3/Area2D" parent_id_path=PackedInt32Array(708086931, 1279646432) index="0" unique_id=232087425]
+polygon = PackedVector2Array(-90, 52, -97, 70, -62, 70, -58, 52, -31, 48, -33, 61, 5, 55, 9, 38, 29, 22, 40, 24, 50, 13, 54, 5, 79, 4, 83, -9, 96, -9, 115, -31, 110, -38, 61, -41, 38, -26, 38, -18, 49, -16, 37, 2, 40, 8, 33, 17, 12, 5, 21, -5, 12, -14, -9, 6, -18, 1, -31, 11, -25, 18, -31, 25, -53, 26, -64, 48, -68, 52, -89, 51)
+
+[node name="RoomObject4" parent="." unique_id=1028415383 instance=ExtResource("2_qjasy")]
+position = Vector2(-292, -261)
+texture = ExtResource("10_ug7gy")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoomObject4/Area2D" parent_id_path=PackedInt32Array(1028415383, 1279646432) index="0" unique_id=717904288]
+polygon = PackedVector2Array(-11, -178, 66, -141, 22, 190, -52, 150)
+
+[node name="RoomObject5" parent="." unique_id=22304266 instance=ExtResource("2_qjasy")]
+position = Vector2(-843, 66)
+texture = ExtResource("7_4k705")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoomObject5/Area2D" parent_id_path=PackedInt32Array(22304266, 1279646432) index="0" unique_id=1694779924]
+polygon = PackedVector2Array(136, -29, 130, -23, 134, 73, 35, 136, -126, 45, -125, -51, -130, -54, -135, -76, -21, -139, 135, -54)
+
+[node name="RoomObject6" parent="." unique_id=1674239616 instance=ExtResource("2_qjasy")]
+position = Vector2(353, -36)
+texture = ExtResource("8_psw2n")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoomObject6/Area2D" parent_id_path=PackedInt32Array(1674239616, 1279646432) index="0" unique_id=431003145]
+polygon = PackedVector2Array(4, -214, 407, 18, 3, 263, -414, 21)
+
+[node name="RoomObject7" parent="." unique_id=1257005458 instance=ExtResource("2_qjasy")]
+position = Vector2(506, -141)
+texture = ExtResource("9_mm7ng")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RoomObject7/Area2D" parent_id_path=PackedInt32Array(1257005458, 1279646432) index="0" unique_id=810561733]
+polygon = PackedVector2Array(-60, 192, -60, 201, -49, 208, -37, 202, -35, 192, 223, 32, 225, 38, 233, 44, 247, 36, 247, -4, 234, -14, 229, -33, 287, -4, 294, -122, -3, -290, -9, -168, 39, -144, -45, -92, -59, -99, -253, 18, -249, 49, -246, 86, -241, 90, -239, 102, -227, 113, -215, 107)
+
+[editable path="RoomObject"]
+[editable path="RoomObject2"]
+[editable path="RoomObject3"]
+[editable path="RoomObject4"]
+[editable path="RoomObject5"]
+[editable path="RoomObject6"]
+[editable path="RoomObject7"]

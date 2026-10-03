@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cclvn8yks1m0c" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/bg_plain_v1.png" id="1_iwh4a"]
 [ext_resource type="PackedScene" uid="uid://bm6diafjv2hj6" path="res://Scenes/Character.tscn" id="2_0y5hw"]
+[ext_resource type="Script" uid="uid://dlkoth00dau4x" path="res://Minigame_scenes/Puzzle_Slider_Minigame/puzzle_slider.gd" id="2_r48xv"]
 [ext_resource type="PackedScene" uid="uid://vg4gb32xhwrw" path="res://Scenes/bedrooom_objects/rug.tscn" id="3_iwh4a"]
 [ext_resource type="Texture2D" uid="uid://dmwe8qxtcytd1" path="res://Assets/V1_BGandAssets-20260928T203720Z-1-001/V1_BGandAssets/carpet-hover.png" id="3_rsf82"]
 [ext_resource type="PackedScene" uid="uid://8k1a80squec0" path="res://Scenes/bedrooom_objects/nightstand.tscn" id="4_o0d8c"]
@@ -124,6 +125,7 @@ shape = SubResource("RectangleShape2D_c8h7i")
 
 [node name="Bedroom_Items" type="Node2D" parent="." unique_id=1958569601]
 position = Vector2(0.5, -91)
+script = ExtResource("2_r48xv")
 
 [node name="Rug" parent="Bedroom_Items" unique_id=1689549767 instance=ExtResource("3_iwh4a")]
 position = Vector2(645, 646.00006)

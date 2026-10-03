@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dtly4k4ua3yyn"]
+
+[ext_resource type="Script" uid="uid://ckebs0vstehvc" path="res://Scripts/bedroom_objects/roomObject.gd" id="1_tnokp"]
+
+[node name="RoomObject" type="Sprite2D" unique_id=2043795701]
+script = ExtResource("1_tnokp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1279646432]
