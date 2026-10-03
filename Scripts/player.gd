@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 200
+const SPEED = 250
 
 var current_direction
 

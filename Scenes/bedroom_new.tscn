@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://blolag0nqs876" path="res://Scenes/dialogue_box.gd" id="17_ug7gy"]
 [ext_resource type="Script" uid="uid://diclifvn2d7mu" path="res://Scenes/run_dialogue.gd" id="18_qjbeq"]
 [ext_resource type="PackedScene" uid="uid://btcn84po7urp3" path="res://Scenes/ProgressManager/ProgressManager.tscn" id="19_qjbeq"]
+[ext_resource type="PackedScene" uid="uid://bm6diafjv2hj6" path="res://Scenes/Character.tscn" id="20_fgq5o"]
 
 [node name="BedroomNew" type="Node2D" unique_id=1499491445]
 
@@ -61,6 +62,7 @@ polygon = PackedVector2Array(-90, 52, -97, 70, -62, 70, -58, 52, -31, 48, -33, 6
 [node name="RoomObject4" parent="room objects" unique_id=1028415383 instance=ExtResource("2_qjasy")]
 position = Vector2(-292, -261)
 texture = ExtResource("10_ug7gy")
+object_dialogue = Array[String](["you clicked on me", "yaya dialgoue"])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject4/Area2D" parent_id_path=PackedInt32Array(1028415383, 1279646432) index="0" unique_id=717904288]
 polygon = PackedVector2Array(-11, -178, 66, -141, 22, 190, -52, 150)
@@ -105,7 +107,6 @@ polygon = PackedVector2Array(25, 24, 26, 27, 30, 27, 34, 62, 30, 66, 10, 74, -17
 position = Vector2(556, -547)
 texture = ExtResource("12_4k705")
 object_dialogue = Array[String](["this one has dialogue"])
-mini_game = "and a game"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="room objects/RoomObject10/Area2D" parent_id_path=PackedInt32Array(125270367, 1279646432) index="0" unique_id=106953522]
 polygon = PackedVector2Array(39, -62, 50, -15, 76, -2, 104, -1, 129, -19, 145, -45, 142, -73, 129, -95, 104, -105, 75, -108, 52, -94, 42, -66, -4, -67, -3, -91, -150, -158, -150, -95, -151, 90, -24, 146, -12, 139, 108, 197, 115, 78, -4, 19, -4, -65)
@@ -143,6 +144,7 @@ offset_left = -1087.0
 offset_top = 581.0
 offset_right = 1012.0
 offset_bottom = 915.0
+mouse_filter = 2
 color = Color(0.6862745, 0.4392157, 0.2509804, 1)
 script = ExtResource("17_ug7gy")
 
@@ -152,6 +154,7 @@ offset_left = 25.0
 offset_top = 25.0
 offset_right = 2067.0
 offset_bottom = 310.0
+mouse_filter = 2
 color = Color(0.69411767, 0.6901961, 0.5686275, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox" unique_id=542694011]
@@ -166,9 +169,13 @@ text = "Dialogue "
 script = ExtResource("18_qjbeq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=186293226]
-zoom = Vector2(0.395, 0.395)
+zoom = Vector2(0.4, 0.4)
 
 [node name="ProgressManager" parent="." unique_id=1512258127 instance=ExtResource("19_qjbeq")]
+
+[node name="Character" parent="." unique_id=1049770983 instance=ExtResource("20_fgq5o")]
+position = Vector2(-133, 128)
+scale = Vector2(0.9, 0.9)
 
 [connection signal="dialogue_done" from="DialogueBox/RichTextLabel" to="DialogueBox" method="_on_dialogue_done"]
 
