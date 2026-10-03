@@ -24,5 +24,5 @@ func on_clicked(text: Array[String], game: String, key: Sprite2D):
 			minigame.scale = Vector2(2,2)
 
 	if(key != null):
-		print("key!")
+		key.visible = true
 		
