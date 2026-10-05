@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Puzzle Minigame"
-run/main_scene="uid://dhuojvth6uege"
+run/main_scene="uid://k06ogx1heba1"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
 [autoload]
