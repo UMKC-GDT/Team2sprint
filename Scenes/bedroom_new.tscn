@@ -173,14 +173,13 @@ offset = Vector2(0, -80)
 position = Vector2(0, -80)
 polygon = PackedVector2Array(136, -29, 130, -23, 134, 73, 35, 136, -126, 45, -125, -51, -130, -54, -135, -76, -21, -139, 135, -54)
 
-[node name="RoomObject2" parent="Y-sortObjects" unique_id=46401239 node_paths=PackedStringArray("key_item") instance=ExtResource("2_qjasy")]
+[node name="RoomObject2" parent="Y-sortObjects" unique_id=46401239 instance=ExtResource("2_qjasy")]
 modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(316, 516)
 texture = ExtResource("5_sdvs8")
 offset = Vector2(0, -150)
-key_item = NodePath("../../Key2")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Y-sortObjects/RoomObject2/Area2D" parent_id_path=PackedInt32Array(46401239, 1279646432) index="0" unique_id=78410547]
 position = Vector2(-3, -152)
@@ -225,6 +224,7 @@ modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 position = Vector2(110, -341)
 texture = ExtResource("4_30l3a")
 object_dialogue = Array[String](["Oh! Theres a photo here..."])
+mini_game = "slider"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="interactable room objects/RoomObject3/Area2D" parent_id_path=PackedInt32Array(708086931, 1279646432) index="0" unique_id=232087425]
 polygon = PackedVector2Array(-90, 52, -97, 70, -62, 70, -58, 52, -31, 48, -33, 61, 5, 55, 9, 38, 29, 22, 40, 24, 50, 13, 54, 5, 79, 4, 83, -9, 96, -9, 115, -31, 110, -38, 61, -41, 38, -26, 38, -18, 49, -16, 37, 2, 40, 8, 33, 17, 12, 5, 21, -5, 12, -14, -9, 6, -18, 1, -31, 11, -25, 18, -31, 25, -53, 26, -64, 48, -68, 52, -89, 51)

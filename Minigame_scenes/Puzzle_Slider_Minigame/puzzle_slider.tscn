@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cjrohpooys7ow"]
 
+[ext_resource type="Script" uid="uid://dlkoth00dau4x" path="res://Minigame_scenes/Puzzle_Slider_Minigame/puzzle_slider.gd" id="1_2m1pc"]
 [ext_resource type="Texture2D" uid="uid://c7pg6arbpuqov" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile1.jpg" id="2_yaehf"]
 [ext_resource type="Texture2D" uid="uid://cflisyfwwxs7d" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile2.jpg" id="3_074og"]
 [ext_resource type="Texture2D" uid="uid://cvr0cnq3kig4b" path="res://Minigame_scenes/Puzzle_Slider_Minigame/img/tile3.jpg" id="4_cegan"]
@@ -19,6 +20,8 @@ colors = PackedColorArray(0.70980394, 0.70980394, 0.70980394, 0.16862746, 0.7079
 gradient = SubResource("Gradient_2m1pc")
 
 [node name="Main" type="Area2D" unique_id=1865724166]
+z_index = 4
+script = ExtResource("1_2m1pc")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1431589444]
 offset_right = 996.0
@@ -79,3 +82,13 @@ visible = false
 position = Vector2(500, 499.50006)
 scale = Vector2(1.4954954, 1.4984986)
 texture = ExtResource("9_1u8w0")
+
+[node name="Button" type="Button" parent="." unique_id=1969442877]
+offset_left = 863.0
+offset_top = 25.0
+offset_right = 971.0
+offset_bottom = 147.0
+theme_override_font_sizes/font_size = 80
+text = "X"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

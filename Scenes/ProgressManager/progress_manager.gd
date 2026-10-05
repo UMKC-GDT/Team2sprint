@@ -23,26 +23,7 @@ func on_clicked(text: Array[String], game: String, key: Sprite2D) -> void:
 	await run_event(text, game, key)
 	processing_event = false
 
-"""
-func on_clicked(text: Array[String], game: String, key: Sprite2D):
-	print("clicked_PM")
-	if(text != null):
-		dialogue_event = true
 
-	if(game == "slider"):
-		minigame_event = true
-
-	if(key != null):
-		inventory_event = true
-
-	print(dialogue_event,minigame_event,inventory_event )
-	run_event(text, game, key)
-	
-		
-
-	print(dialogue_event,minigame_event,inventory_event )
-"""
-		
 func run_event(text: Array[String], game: String, key: Sprite2D):
 	
 	
