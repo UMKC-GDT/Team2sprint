@@ -29,7 +29,9 @@
 [ext_resource type="AudioStream" uid="uid://comerq3w2iam0" path="res://Assets/dream ost 1.ogg" id="19_q8tsh"]
 [ext_resource type="PackedScene" uid="uid://btcn84po7urp3" path="res://Scenes/ProgressManager/ProgressManager.tscn" id="19_qjbeq"]
 [ext_resource type="PackedScene" uid="uid://bm6diafjv2hj6" path="res://Scenes/Character.tscn" id="20_fgq5o"]
-[ext_resource type="Texture2D" uid="uid://bkggi86nwbuif" path="res://Assets/key_placeholder.png" id="30_qiobu"]
+[ext_resource type="Texture2D" uid="uid://vetkebtmhfg4" path="res://Assets/Key_1.png" id="30_mwdcc"]
+[ext_resource type="Texture2D" uid="uid://bsymibnl1obmv" path="res://Assets/Key_3.png" id="31_m0upy"]
+[ext_resource type="Texture2D" uid="uid://cifsop52aud4a" path="res://Assets/Key_5.png" id="32_lk7sh"]
 
 [node name="BedroomNew" type="Node2D" unique_id=1499491445]
 position = Vector2(1, 4)
@@ -222,7 +224,7 @@ polygon = PackedVector2Array(12, -6, 38, -15, 59, -13, 69, -5, 72, 8, 79, 16, 10
 modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 position = Vector2(110, -341)
 texture = ExtResource("4_30l3a")
-mini_game = "slider"
+object_dialogue = Array[String](["Oh! Theres a photo here..."])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="interactable room objects/RoomObject3/Area2D" parent_id_path=PackedInt32Array(708086931, 1279646432) index="0" unique_id=232087425]
 polygon = PackedVector2Array(-90, 52, -97, 70, -62, 70, -58, 52, -31, 48, -33, 61, 5, 55, 9, 38, 29, 22, 40, 24, 50, 13, 54, 5, 79, 4, 83, -9, 96, -9, 115, -31, 110, -38, 61, -41, 38, -26, 38, -18, 49, -16, 37, 2, 40, 8, 33, 17, 12, 5, 21, -5, 12, -14, -9, 6, -18, 1, -31, 11, -25, 18, -31, 25, -53, 26, -64, 48, -68, 52, -89, 51)
@@ -231,16 +233,16 @@ polygon = PackedVector2Array(-90, 52, -97, 70, -62, 70, -58, 52, -31, 48, -33, 6
 modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 position = Vector2(-292, -261)
 texture = ExtResource("10_ug7gy")
-object_dialogue = Array[String](["you clicked on me", "yaya dialgoue"])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="interactable room objects/RoomObject4/Area2D" parent_id_path=PackedInt32Array(1028415383, 1279646432) index="0" unique_id=717904288]
 polygon = PackedVector2Array(-11, -178, 66, -141, 22, 190, -52, 150)
 
-[node name="RoomObject6" parent="interactable room objects" unique_id=1674239616 instance=ExtResource("2_qjasy")]
+[node name="RoomObject6" parent="interactable room objects" unique_id=1674239616 node_paths=PackedStringArray("key_item") instance=ExtResource("2_qjasy")]
 modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 position = Vector2(353, -36)
 texture = ExtResource("8_psw2n")
-object_dialogue = Array[String](["i clicked on rug", "testing testing ", "whoop whoop"])
+object_dialogue = Array[String](["What is this supposed to unlock?"])
+key_item = NodePath("../../Key3")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="interactable room objects/RoomObject6/Area2D" parent_id_path=PackedInt32Array(1674239616, 1279646432) index="0" unique_id=1730456066]
 polygon = PackedVector2Array(319, -36, 406, 16, 9, 265, -417, 19, -1, -214, 57, -184, -95, -91, -96, -19, -87, -12, -86, 1, -75, 8, -64, 4, 91, 88, 93, 98, 103, 103, 115, 98, 116, 90)
@@ -265,7 +267,6 @@ polygon = PackedVector2Array(25, 24, 26, 27, 30, 27, 34, 62, 30, 66, 10, 74, -17
 modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 position = Vector2(556, -547)
 texture = ExtResource("12_4k705")
-object_dialogue = Array[String](["this one has dialogue"])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="interactable room objects/RoomObject10/Area2D" parent_id_path=PackedInt32Array(125270367, 1279646432) index="0" unique_id=106953522]
 polygon = PackedVector2Array(39, -62, 50, -15, 76, -2, 104, -1, 129, -19, 145, -45, 142, -73, 129, -95, 104, -105, 75, -108, 52, -94, 42, -66, -4, -67, -3, -91, -150, -158, -150, -95, -151, 90, -24, 146, -12, 139, 108, 197, 115, 78, -4, 19, -4, -65)
@@ -275,7 +276,8 @@ modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 z_index = 2
 position = Vector2(-909, -623)
 texture = ExtResource("13_1pg7v")
-key_item = NodePath("../../Key4")
+object_dialogue = Array[String](["How did this get in here?"])
+key_item = NodePath("../../Key2")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="interactable room objects/RoomObject11/Area2D" parent_id_path=PackedInt32Array(255219782, 1279646432) index="0" unique_id=1082675792]
 polygon = PackedVector2Array(-117, 43, -117, 53, -23, 101, -14, 100, 49, 65, 67, 65, 91, 53, 101, 45, 108, 28, 139, 10, 137, -8, 134, -35, 30, -78, -124, 10, -121, 30, -124, 35, -121, 42)
@@ -284,17 +286,17 @@ polygon = PackedVector2Array(-117, 43, -117, 53, -23, 101, -14, 100, 49, 65, 67,
 modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 position = Vector2(214, -262)
 texture = ExtResource("8_1pg7v")
-object_dialogue = Array[String](["you found a key!", "testing testing ", "asdfasdfsad"])
+object_dialogue = Array[String](["A key?"])
 key_item = NodePath("../../Key1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="interactable room objects/RoomObject12/Area2D" parent_id_path=PackedInt32Array(1292781736, 1279646432) index="0" unique_id=1442654628]
 polygon = PackedVector2Array(-2, -50, -36, -29, -36, -16, -29, -13, -21, 19, -2, 25, 20, 18, 30, -14, 35, -24, 37, -37, 23, -47)
 
-[node name="RoomObject13" parent="interactable room objects" unique_id=1360500746 node_paths=PackedStringArray("key_item") instance=ExtResource("2_qjasy")]
+[node name="RoomObject13" parent="interactable room objects" unique_id=1360500746 instance=ExtResource("2_qjasy")]
 modulate = Color(0.5568628, 0.78039217, 0.8666667, 1)
 position = Vector2(-468, -388)
 texture = ExtResource("15_1pg7v")
-key_item = NodePath("../../Key3")
+object_dialogue = Array[String](["I haven't read a book in forever"])
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="interactable room objects/RoomObject13/Area2D" parent_id_path=PackedInt32Array(1360500746, 1279646432) index="0" unique_id=1999112157]
 polygon = PackedVector2Array(79, 6, 114, 23, 104, 46, 100, 68, 105, 81, 107, 84, 97, 90, 56, 70, 59, 15, 77, 8, 16, -15, 17, -1, 18, 10, 27, 35, 17, 43, 1, 36, -14, 29, -43, 15, -47, 9, -57, 4, -80, -8, -87, -8, -114, -22, -116, -78, -93, -90, -85, -83, -84, -75, -71, -76, -62, -70, -58, -66, -44, -58, -36, -57, -24, -50, -23, -44, 4, -34, 1, -19, 16, -16)
@@ -302,26 +304,20 @@ polygon = PackedVector2Array(79, 6, 114, 23, 104, 46, 100, 68, 105, 81, 107, 84,
 [node name="Key1" type="Sprite2D" parent="." unique_id=885471577]
 visible = false
 position = Vector2(-1134, -1102)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("30_qiobu")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("30_mwdcc")
 
 [node name="Key2" type="Sprite2D" parent="." unique_id=1872509750]
 visible = false
-position = Vector2(-919, -1112)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("30_qiobu")
+position = Vector2(-919, -1108)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("31_m0upy")
 
 [node name="Key3" type="Sprite2D" parent="." unique_id=1504904311]
 visible = false
 position = Vector2(-726, -1102)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("30_qiobu")
-
-[node name="Key4" type="Sprite2D" parent="." unique_id=1333221497]
-visible = false
-position = Vector2(-522, -1113)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("30_qiobu")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("32_lk7sh")
 
 [connection signal="dialogue_done" from="DialogueBox/RichTextLabel" to="DialogueBox" method="_on_dialogue_done"]
 

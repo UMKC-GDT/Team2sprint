@@ -27,11 +27,17 @@ func on_clicked(text: Array[String], game: String, key: Sprite2D):
 	if(key != null):
 		inventory_event = true
 
-	
+	print(dialogue_event,minigame_event,inventory_event )
 	run_event(text, game, key)
+	
+		
+
+	print(dialogue_event,minigame_event,inventory_event )
 		
 		
 func run_event(text: Array[String], game: String, key: Sprite2D):
+	
+	
 	if(dialogue_event):
 		Dialogue_Manager.trigger_dialogue(text)
 		await Dialogue_Manager.get_child(1).dialogue_done
@@ -43,8 +49,9 @@ func run_event(text: Array[String], game: String, key: Sprite2D):
 			minigame_instantiated = true
 			minigame.position = Vector2(-1033,-1033)
 			minigame.scale = Vector2(2,2)
+	
 	if(inventory_event):
-		key.visible = true
+		key.visible = true 
 		
 	dialogue_event = false
 	minigame_event = false

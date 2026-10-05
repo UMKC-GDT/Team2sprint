@@ -25,7 +25,6 @@ func on_mouse_exited() -> void:
 	
 
 func on_clicked(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	#if mouse clicks the rug
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		SignalBus.object_clicked.emit(object_dialogue,mini_game, key_item)
 		print("clicked")
