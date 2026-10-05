@@ -5,6 +5,7 @@ extends Node2D
 
 
 const PUZZLE_SLIDER = preload("uid://cjrohpooys7ow")
+const INSTRUMENT_PUZZLE = preload("uid://m7ljlhmjc2xj")
 var minigame_instantiated = false
 
 var processing_event = false
@@ -34,6 +35,14 @@ func run_event(text: Array[String], game: String, key: Sprite2D):
 	if game == "slider":
 		if not minigame_instantiated:
 			var minigame = PUZZLE_SLIDER.instantiate()
+			get_tree().current_scene.add_child(minigame)
+			minigame_instantiated = true
+			minigame.position = Vector2(-1033,-1033)
+			minigame.scale = Vector2(2,2)
+			
+	elif game == "instrument":
+		if not minigame_instantiated:
+			var minigame = INSTRUMENT_PUZZLE.instantiate()
 			get_tree().current_scene.add_child(minigame)
 			minigame_instantiated = true
 			minigame.position = Vector2(-1033,-1033)

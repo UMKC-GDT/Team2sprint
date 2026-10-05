@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://m7ljlhmjc2xj"]
 
 [ext_resource type="Script" uid="uid://uh06rtn55ir3" path="res://Minigame_scenes/InstrumentMinigame/instrument_puzzle.gd" id="1_jlyym"]
+[ext_resource type="Texture2D" uid="uid://b7rvayprgd07j" path="res://Minigame_scenes/InstrumentMinigame/guitar.jpg" id="2_271xh"]
+[ext_resource type="Texture2D" uid="uid://baxabbfvfn04y" path="res://Minigame_scenes/InstrumentMinigame/bluesquare.png" id="3_q1krj"]
+[ext_resource type="Texture2D" uid="uid://b0euycdnopea3" path="res://Minigame_scenes/InstrumentMinigame/greensquare.png" id="4_2jdeq"]
+[ext_resource type="Texture2D" uid="uid://dsq7tm6fpefmn" path="res://Minigame_scenes/InstrumentMinigame/redsquare.png" id="5_vtxg8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
 
@@ -8,22 +12,36 @@
 script = ExtResource("1_jlyym")
 correct_key = Array[int]([2, 2, 3])
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2045704545]
+position = Vector2(490, 486)
+texture = ExtResource("2_271xh")
+
 [node name="Button1" type="Area2D" parent="." unique_id=1294256987]
-position = Vector2(0, -48)
+position = Vector2(491, 340)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button1" unique_id=1016736553]
 shape = SubResource("RectangleShape2D_yf5fn")
 
+[node name="Sprite2D" type="Sprite2D" parent="Button1" unique_id=1664195850]
+texture = ExtResource("3_q1krj")
+
 [node name="Button2" type="Area2D" parent="." unique_id=1142313463]
+position = Vector2(491, 430)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button2" unique_id=789889397]
 shape = SubResource("RectangleShape2D_yf5fn")
 
+[node name="Sprite2D" type="Sprite2D" parent="Button2" unique_id=2088728911]
+texture = ExtResource("4_2jdeq")
+
 [node name="Button3" type="Area2D" parent="." unique_id=886231675]
-position = Vector2(0, 48)
+position = Vector2(490, 534)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Button3" unique_id=835865658]
 shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Button3" unique_id=2071295497]
+texture = ExtResource("5_vtxg8")
 
 [connection signal="input_event" from="Button1" to="." method="_on_button_1_input_event"]
 [connection signal="input_event" from="Button2" to="." method="_on_button_2_input_event"]

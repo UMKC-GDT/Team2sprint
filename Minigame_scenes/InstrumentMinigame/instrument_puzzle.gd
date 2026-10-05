@@ -13,6 +13,7 @@ func curr_key_add(code:int) -> void:
 	if curr_key == correct_key:
 		print("Code Accepted")
 		code_accepted.emit()
+		queue_free()
 		#Here is where the real "win" logic will go
 	elif curr_key.size() == correct_key.size():
 		curr_key.clear()
